@@ -7,14 +7,6 @@ import it.unimore.dipi.iot.wldt.exception.WldtDigitalTwinStateEventException;
 
 import java.util.stream.Collectors;
 
-/* To make it work, do the following:
- *   1. Sync the Digital Adapter with the DT state in the "onDigitalTwinSync" callback
- *   2. Expose to the external world what is happening populating:
- *       a. Properties: "onStateChangePropertyUpdated"
- *       b. Events: "onDigitalTwinStateEventNotificationReceived"
- *       c. Actions: "onStateChangeActionUpdated"
- *       d. Relationships: "onStateChangeRelationshipCreated" or "onStateChangeRelationshipInstanceCreated"
- */
 
 public class PrintDigitalAdapter extends DigitalAdapter<String>{
     public PrintDigitalAdapter(String adapterId) {
@@ -23,15 +15,15 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
 
     //////////////////////// PROPERTIES VARIATIONS CALLBACKS /////////////////////////////////////////////////////
     protected void onStateChangePropertyCreated(DigitalTwinStateProperty<?> digitalTwinStateProperty){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangePropertyDeleted(DigitalTwinStateProperty<?> digitalTwinStateProperty){
-        //to define;
+        //never used;
     };
 
     protected void onStatePropertyUpdated(DigitalTwinStateProperty<?> digitalTwinStateProperty){
-        //to define;
+        //never used;
     };
 
     @Override
@@ -40,33 +32,33 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
     };
 
     protected void onStatePropertyDeleted(DigitalTwinStateProperty<?> digitalTwinStateProperty){
-        //to define;
+        //never used;
     };
 
     //////////////////////// ACTIONS VARIATIONS CALLBACKS /////////////////////////////////////////////////////
     protected void onStateChangeActionEnabled(DigitalTwinStateAction digitalTwinStateAction){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeActionUpdated(DigitalTwinStateAction digitalTwinStateAction){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeActionDisabled(DigitalTwinStateAction digitalTwinStateAction){
-        //to define;
+        //never used;
     };
 
     //////////////////////// EVENTS VARIATIONS CALLBACKS /////////////////////////////////////////////////////
     protected void onStateChangeEventRegistered(DigitalTwinStateEvent digitalTwinStateEvent){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeEventRegistrationUpdated(DigitalTwinStateEvent digitalTwinStateEvent){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeEventUnregistered(DigitalTwinStateEvent digitalTwinStateEvent){
-        //to define;
+        //never used;
     };
 
 
@@ -82,28 +74,28 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
     //////////////////////// RELATIONSHIPS CALLBACKS /////////////////////////////////////////////////////
 
     protected void onStateChangeRelationshipCreated(DigitalTwinStateRelationship<?> digitalTwinStateRelationship){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeRelationshipInstanceCreated(DigitalTwinStateRelationshipInstance<?> digitalTwinStateRelationshipInstance){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeRelationshipDeleted(DigitalTwinStateRelationship<?> digitalTwinStateRelationship){
-        //to define;
+        //never used;
     };
 
     protected void onStateChangeRelationshipInstanceDeleted(DigitalTwinStateRelationshipInstance<?> digitalTwinStateRelationshipInstance){
-        //to define;
+        //never used;
     };
 
     //////////////////////// ADAPTER CALLBACKS /////////////////////////////////////////////////////
     public void onAdapterStart(){
-        //to define;
+        //never used;
     };
 
     public void onAdapterStop(){
-        //to define;
+        //never used;
     };
 
 
@@ -129,22 +121,22 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
     }
 
     public void onDigitalTwinUnSync(IDigitalTwinState digitalTwinState){
-        //to define;
+        //never used;
     }
 
     public void onDigitalTwinCreate(){
-        //to define;
+        //never used;
     };
 
     public void onDigitalTwinStart(){
-        //to define;
+        //never used;
     };
 
     public void onDigitalTwinStop(){
-        //to define;
+        //never used;
     };
 
     public void onDigitalTwinDestroy(){
-        //to define;
+        //never used;
     };
 }
