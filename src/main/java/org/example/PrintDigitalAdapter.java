@@ -4,6 +4,8 @@ import it.unimore.dipi.iot.wldt.adapter.digital.DigitalAdapter;
 import it.unimore.dipi.iot.wldt.core.state.*;
 import it.unimore.dipi.iot.wldt.exception.EventBusException;
 import it.unimore.dipi.iot.wldt.exception.WldtDigitalTwinStateEventException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.stream.Collectors;
 
@@ -12,6 +14,7 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
     public PrintDigitalAdapter(String adapterId) {
         super(adapterId, "");
     }
+    private final static Logger logger = LoggerFactory.getLogger(PrintDigitalAdapter.class);
 
     //////////////////////// PROPERTIES VARIATIONS CALLBACKS /////////////////////////////////////////////////////
     protected void onStateChangePropertyCreated(DigitalTwinStateProperty<?> digitalTwinStateProperty){
@@ -28,6 +31,7 @@ public class PrintDigitalAdapter extends DigitalAdapter<String>{
 
     @Override
     protected void onStateChangePropertyUpdated(DigitalTwinStateProperty<?> digitalTwinStateProperty){
+        logger.info("adapter Id: [{}] --> {} property is {}", this.getId(), digitalTwinStateProperty.getKey(), digitalTwinStateProperty.getValue());
         System.out.println(digitalTwinStateProperty.getKey() + " property is " + digitalTwinStateProperty.getValue());
     };
 
